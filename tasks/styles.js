@@ -2,6 +2,7 @@ import gulp from 'gulp';
 import plumber from 'gulp-plumber';
 import gulpIf from 'gulp-if';
 import rupture from 'rupture';
+import jeet from 'jeet';
 import stylint from 'gulp-stylint';
 import stylus from 'gulp-stylus';
 import importIfExist from 'stylus-import-if-exist';
@@ -22,6 +23,7 @@ gulp.task('styles', () => (
 			use: [
 				importIfExist(),
 				rupture(),
+				jeet(),
 				autoprefixer()
 			],
 			'include css': true

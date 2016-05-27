@@ -1,0 +1,10 @@
+include ../banner/banner
+include ../navigation/navigation
+include ../profile/profile
+include ../social-icons/social-icons
+mixin header()
+	+banner()
+	+b.HEADER.header&attributes(attributes)
+		+navigation()
+		+profile()
+		+social-icons()._top

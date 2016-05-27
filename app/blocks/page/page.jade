@@ -1,3 +1,7 @@
+include ../header/header
+include ../about/about
 mixin page()
 	+b('body').page&attributes(attributes)
-		block
+		+header
+		main.content(role="main")
+			+about

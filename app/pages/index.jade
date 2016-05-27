@@ -1,6 +1,17 @@
 extends /blocks/layout-default/layout-default
 
 block head
-	- var pageTitle = 'CSSSR Project Template';
+	- var pageTitle = 'Александр Лаврик - Front-end разработчик';
 
-block content
+block about
+	- var aboutTitleHeading = 'Обо мне';
+	- var aboutIntroHeading = 'Меня зовут Александр, и я начинающий Front-end разработчик'
+	- var aboutSkillsHeading = 'Знания и опыт'
+
+block about-article-text
+	+e.P.text
+		| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente reiciendis esse asperiores, fugit distinctio assumenda blanditiis numquam eveniet in, ratione pariatur, quibusdam dolores praesentium, tempora debitis doloremque voluptatibus cumque illum?
+	+e.P.text
+		| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti nesciunt quaerat voluptas accusantium, rem placeat?
+	+e.P.text
+		| &nbsp;

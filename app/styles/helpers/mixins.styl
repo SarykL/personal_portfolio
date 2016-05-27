@@ -1,9 +1,13 @@
 // Clear the float on any element.
 clearfix()
+	zoom 1
 	&:after
+	&:before
+		content ""
 		display table
+	&:after
 		clear both
-		content ''
+
 
 // Fix no working `-webkit-text-size-adjust: 100%;` in Android.
 fix-text-size-adjust()

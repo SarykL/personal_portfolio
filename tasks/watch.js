@@ -9,10 +9,10 @@ gulp.task('watch', () => {
 	global.watch = true;
 
 	watch(['app/sprites/**/*.png', '!app/sprites/*.png'], () => runSequence('sprites'));
-	watch('app/{styles,blocks}/**/*.styl', () => {
+	watch(['app/styles/**/*.styl', 'app/blocks/**/*.styl'], () => {
 		runSequence(['styles', 'styles:lint'], () => bs.reload('assets/styles/app.min.css'));
 	});
-	watch(['app/{pages,blocks}/**/*.jade'], () => runSequence('templates', bs.reload));
+	watch(['app/pages/**/*.jade', 'app/blocks/**/*.jade'], () => runSequence('templates', bs.reload));
 	watch('app/resources/**/*', () => runSequence('copy', bs.reload));
 	watch('app/icons/**/*.svg', () => runSequence('icons', bs.reload));
 
