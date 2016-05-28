@@ -1,17 +1,24 @@
 extends /blocks/layout-default/layout-default
 
 block head
-	- var pageTitle = 'Александр Лаврик - Front-end разработчик';
+	- var pageTitle = 'Александр Лаврик - Front-end разработчик'
 
 block about
-	- var aboutTitleHeading = 'Обо мне';
+	- var aboutTitleHeading = 'Обо мне'
 	- var aboutIntroHeading = 'Меня зовут Александр, и я начинающий Front-end разработчик'
 	- var aboutSkillsHeading = 'Знания и опыт'
+	- var skillsItemList = ['HTML (Jade)', 'CSS (Stylus, SASS(SCSS))', 'БЭМ, БЭМ-именование', 'Twiter Bootstrap', 'JQuery', 'Git', 'Gulp']
 
-block about-article-text
+block about-intro
 	+e.P.text
 		| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente reiciendis esse asperiores, fugit distinctio assumenda blanditiis numquam eveniet in, ratione pariatur, quibusdam dolores praesentium, tempora debitis doloremque voluptatibus cumque illum?
 	+e.P.text
 		| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti nesciunt quaerat voluptas accusantium, rem placeat?
 	+e.P.text
 		| &nbsp;
+block about-skills
+	+e.UL.list
+		each skillsItem in skillsItemList
+			+e.list-item= skillsItem
+	+b.A.download-cv.button(href='http://front-end-my-name.ru/CV.pdf' target='_blank')
+		| Скачать Резюме
