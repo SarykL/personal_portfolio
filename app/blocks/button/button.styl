@@ -4,21 +4,43 @@
 
 
 .button
+	position relative
 	display block
+	overflow hidden
 	font-size 1.125rem
 	font-weight 700
 	line-height 3rem
 	text-align center
 	text-decoration none
 	color #fff
-	background-color main-text-color
+	background main-text-color
+	border 3px solid main-text-color
 	border-radius 10px
+	z-index 1
+	transition all .7s
+
+	&:after
+		position absolute
+		content ''
+		background #f4eded
+		width 0
+		height 100%
+		left 0
+		top 0
+		z-index -1
+		transition all .7s
+
+	&:hover, &:active
+		color main-text-color
+
+		&:after
+			width 100%
 
 	&_download
 		margin-top 30px
 		+tablet()
-			col(1/2)
 			position absolute
+			width 50%
+			text-align center
 			right 0
 			bottom 0
-			text-align center
