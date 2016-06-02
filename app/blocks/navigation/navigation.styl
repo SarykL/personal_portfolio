@@ -1,3 +1,9 @@
+/* ==========================================================================
+   Navigation block styles
+   ========================================================================== */
+
+
+
 .navigation
 	display block
 	text-align center
@@ -5,21 +11,22 @@
 		display none
 	padding-x(15px)
 
-.navbar
-	min-height 50px
-	&__list
-		&-item
-			display inline-block
-			&-link
-				margin-x(10px)
-				padding-y(10px)
-				font-family 'Play'
-				font-size .75rem
-				font-weight 700
-				line-height 3rem
-				text-transform uppercase
-				text-decoration none
-				color #fff
-				transition .25s
-				&:hover
-					border-bottom 3px solid #fff
+	&__bar
+		min-height 50px
+
+	&__item
+		display inline-block
+
+	&__link
+		margin-x(10px)
+		padding-y(10px)
+		font-family 'Play'
+		font-size .75rem
+		font-weight 700
+		line-height 3rem
+		text-transform uppercase
+		text-decoration none
+		color #fff
+		transition .25s
+		&:hover
+			border-bottom 3px solid #fff

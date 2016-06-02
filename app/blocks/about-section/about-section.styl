@@ -1,0 +1,27 @@
+/* ==========================================================================
+   About-section block styles
+   ========================================================================== */
+
+
+.about-section
+	padding-y(60px)
+	display block
+	font-family 'PT Sans'
+	color main-text-color
+	background #f4eded
+
+	&__title
+		margin-bottom 60px
+		font-size 3rem
+		font-weight 700
+		text-align center
+
+	&__article-wrapper
+		+mobile()
+			center(90%)
+		+tablet()
+			center(80%)
+		+desktop()
+			center(70%)
+		+hd()
+			center(60%)

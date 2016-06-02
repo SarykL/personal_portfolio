@@ -1,0 +1,7 @@
+mixin about-skills(skills)
+	+b.ASIDE.about-skills&attributes(attributes)
+		+e.H4.heading= aboutSkillsHeading
+		+e.UL.list
+			each skill in skills
+				+e.item= skill
+		block about-skills

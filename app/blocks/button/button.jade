@@ -1,2 +1,2 @@
-mixin button()
-	+b.A.button&attributes(attributes)(href='#' target='_blank')= downloadCv
+mixin button(btn)
+	+b.A(href=btn.href target='_blank').button&attributes(attributes)= btn.text

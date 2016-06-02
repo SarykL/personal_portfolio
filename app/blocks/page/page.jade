@@ -1,8 +1,9 @@
 include ../header/header
-include ../about/about
+include ../about-section/about-section
+include ../button/button
 
 mixin page()
 	+b('body').page&attributes(attributes)
 		+header
 		main.content(role="main")
-			+about
+			+about-section

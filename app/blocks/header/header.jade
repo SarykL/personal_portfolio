@@ -4,7 +4,12 @@ include ../profile/profile
 include ../social-icons/social-icons
 mixin header()
 	+banner()
+	// Header block begin
 	+b.HEADER.header&attributes(attributes)
+		// Navigation bar
 		+navigation()
+		// User info
 		+profile()
+		// Social icons list
 		+social-icons()._top
+	// Header block end	

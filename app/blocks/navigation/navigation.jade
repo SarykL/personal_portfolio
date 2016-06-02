@@ -1,8 +1,7 @@
 mixin navigation()
 	+b.navigation._top&attributes(attributes)
-		+b.NAV.navbar
+		+e.NAV.bar
 			- var navItemList = ['Главная', 'Мои работы','Контакты']
 			+e.UL.list
 				each navItem in navItemList
-					+e.LI.list-item
-						+e.A.list-item-link(href="#")= navItem
+					+e.LI.item: +e.A.link(href="#")= navItem

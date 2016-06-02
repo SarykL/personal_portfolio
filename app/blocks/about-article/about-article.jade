@@ -1,0 +1,8 @@
+include ../about-intro/about-intro
+include ../about-skills/about-skills
+- var aboutSkillsHeading = 'Основные навыки'
+- var aboutIntroHeading = 'Меня зовут Александр, и я начинающий Front-end разработчик'
+mixin about-article()
+	+b.ARTICLE.about-article&attributes(attributes)
+		+about-intro
+		+about-skills(['HTML (Jade)', 'CSS (Stylus, SASS)', 'БЭМ, БЭМ-именование', 'Twiter Bootstrap', 'JQuery', 'Git', 'Gulp'])

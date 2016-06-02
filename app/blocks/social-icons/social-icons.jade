@@ -1,11 +1,7 @@
 mixin social-icons()
 	+b.social-icons&attributes(attributes)
 		+e.UL.list
-			+e.LI.list-item
-				+e.A(href="#").link.icon-facebook
-			+e.LI.list-item
-				+e.A(href="#").link.icon-linkedin
-			+e.LI.list-item
-				+e.A(href="#").link.icon-google-plus
-			+e.LI.list-item
-				+e.A(href="#").link.icon-github
+			+e.LI.item: +e.A(href="#").link.icon-facebook
+			+e.LI.item: +e.A(href="#").link.icon-linkedin
+			+e.LI.item: +e.A(href="#").link.icon-google-plus
+			+e.LI.item: +e.A(href="#").link.icon-github
