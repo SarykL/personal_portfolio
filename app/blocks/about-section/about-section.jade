@@ -1,8 +1,0 @@
-include ../about-article/about-article
-mixin about-section()
-	+b.SECTION.about-section&attributes(attributes)
-		block about
-		+e.title
-			+e.H3.heading= aboutTitle
-		+e.article-wrapper
-			+about-article

@@ -1,9 +1,18 @@
 include ../header/header
-include ../about-section/about-section
 include ../button/button
+include ../content-section/content-section
+include ../about-article/about-article
+include ../works-article/works-article
+- var aboutSkillsHeading = 'Основные навыки'
+- var aboutIntroHeading = 'Меня зовут Александр, и я начинающий Front-end разработчик'
 
 mixin page()
 	+b('body').page&attributes(attributes)
 		+header
 		main.content(role="main")
-			+about-section
+			// About Section
+			+content-section({'title': 'Обо мне'}).about-section
+				block about
+			// My Works Section
+			+content-section({'title' : 'Мои работы'}).works-section
+				block myworks

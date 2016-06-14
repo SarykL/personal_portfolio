@@ -1,0 +1,6 @@
+include ../section-title/section-title
+mixin content-section(section)
+	+b.SECTION.content-section&attributes(attributes)
+		+section-title(section)
+		+e.article-wrapper
+			block
