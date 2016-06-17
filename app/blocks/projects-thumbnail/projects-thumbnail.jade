@@ -1,0 +1,39 @@
+//- TODO
+//- 1. Добавление данных о проекте из json файла 
+//- 
+include ../projects-modal/projects-modal
+mixin projects-thumbnail()
+	+b.projects-thumbnail&attributes(attributes)
+		+e.UL.list
+			+e.item
+				+e.IMG(src="//placehold.it/600x400", alt="").image
+				+e.overlay
+					+e.H5.title: | Project name
+					+e.A(href="#project1").link: | Подробнее
+					+projects-modal({
+						'id' : 'project1',
+						'title' : 'Project name One',
+						'img'  : '//placehold.it/600x400',
+						'text' : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum expedita quos natus in. Deserunt minima, fuga dolore odio qui, error.',
+						'demo' : '#',
+						'repo' : 'https://github.com/SarykL'
+						
+						})
+			+e.item
+				+e.IMG(src="//placehold.it/600x400", alt="").image
+				+e.overlay
+					+e.H5.title: | Project name
+					+e.A(href="#project2").link: | Подробнее
+					+projects-modal({'id' : 'project2'})
+			+e.item
+				+e.IMG(src="//placehold.it/600x400", alt="").image
+				+e.overlay
+					+e.H5.title: | Project name
+					+e.A(href="#project3").link: | Подробнее
+					+projects-modal({'id' : 'project3'})
+			+e.item
+				+e.IMG(src="//placehold.it/600x400", alt="").image
+				+e.overlay
+					+e.H5.title: | Project name
+					+e.A(href="#project4").link: | Подробнее
+					+projects-modal({'id' : 'project4'})

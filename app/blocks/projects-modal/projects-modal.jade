@@ -1,0 +1,11 @@
+mixin projects-modal(project)
+	+b.projects-modal.mfp-hide(id= project.id)&attributes(attributes)
+		+e.title
+			+e.H4.heading: | #{project.title}
+		+e.content
+			+e.IMG.preview-image(src=project.img alt='')
+			+e.P.description: | #{project.text}
+			+e.details
+				+e.A(href=project.demo target='_blank').view-demo: | Демонстрация
+				+e.A(href=project.repo target='_blank').view-repo: | Посмотреть код
+			

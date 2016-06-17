@@ -1,0 +1,114 @@
+/* ==========================================================================
+   Modal popup styles
+   ========================================================================== */
+/**
+ * @TODO
+	2. Увеличить стандартную кнопку 'close'
+ */
+
+
+.projects-modal
+	position relative
+	display block
+	padding-y(30px)
+	// center()
+	width 100%
+	min-height 100vh
+	background rgb(227, 227, 238)
+	// +hd()
+	// 	width 100%
+
+	&__content
+		position relative
+		center(95%)
+		margin-top 20px
+		+tablet()
+			center(80%)
+		+desktop()
+			center(70%)
+		+hd()
+			center(60%)
+
+	&__title
+		text-align center
+		// margin-top 30px
+		font-family 'PT Sans'
+		font-size 1.75rem
+		text-transform uppercase
+		font-weight 700
+		color main-text-color
+
+
+	&__preview-image
+		center()
+		width 100%
+		height auto
+
+	&__description
+		margin-top 40px
+		padding-x(10px)
+		font-family 'PT Sans'
+		font-size 1.125rem
+		color main-text-color
+
+	&__details
+		display block
+		margin-top 30px
+		text-align center
+		padding-bottom 10px
+		+above(480px)
+			margin-top 90px
+
+	&__view-demo
+		display block
+		padding-x(20px)
+		padding-y(20px)
+		stack(1)
+		margin-bottom 20px
+		font-size 1rem
+		font-weight 700
+		color main-text-color
+		border 2px solid main-text-color
+		border-radius 7px
+		text-decoration none
+
+		&:before
+			position relative
+			content '\e906'
+			font-family 'icomoon' !important
+			font-size 1.6rem
+			font-weight 400 !important
+			// line-height 1.4rem
+			margin-left 10px
+			top 5px
+			right 15px
+
+		+above(580px)
+			unstack()
+			margin-right 50px
+
+	&__view-repo
+		@extend .projects-modal__view-demo
+		margin 0
+
+		&:before
+			position relative
+			content '\e901'
+			font-family 'icomoon' !important
+			font-size 1.6rem
+			font-weight 400 !important
+			// line-height 1.4rem
+			margin-left 10px
+			top 3px
+			right 15px
+
+
+/*
+   Redefining base magnific-popup styles
+   ========================================================================== */
+
+.mfp-close
+	color main-text-color !important
+	opacity 1
+	font-size 3rem
+	font-weight 700

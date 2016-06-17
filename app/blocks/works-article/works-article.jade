@@ -1,3 +1,5 @@
+include ../projects-thumbnail/projects-thumbnail
 mixin works-article()
 	+b.ARTICLE.works-article&attributes(attributes)
-		| works-article
+		+projects-thumbnail
+		
