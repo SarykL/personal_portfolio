@@ -1,0 +1,9 @@
+mixin contacts-form()
+	+b.FORM.contacts-form&attributes(attributes)#contactsForm
+		+e.LABEL.label(for='name'): | Введите имя
+		+e.INPUT.input(name='name' type='text' placeholder='Как к Вам обращаться?' required)
+		+e.LABEL.label(for='email'): | Введите E-mail
+		+e.INPUT.input(name='email' type='email' placeholder='Куда мне писать?' required)
+		+e.LABEL.label(for='message'): | Введите сообщение
+		+e.TEXTAREA.textarea(name='message' type='text' placeholder='С какой целью хотите обратиться?' required)
+		+e.BUTTON.button.button_submit(type='submit'): | Отправить

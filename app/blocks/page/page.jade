@@ -3,6 +3,7 @@ include ../button/button
 include ../content-section/content-section
 include ../about-article/about-article
 include ../works-article/works-article
+include ../contacts-article/contacts-article
 - var aboutSkillsHeading = 'Основные навыки'
 - var aboutIntroHeading = 'Меня зовут Александр, и я начинающий Front-end разработчик'
 
@@ -16,4 +17,7 @@ mixin page()
 			// My Works Section
 			+content-section({'title' : 'Мои работы'}).works-section
 				block myworks
+			// Contacts Section
+			+content-section({'title' : 'Связаться со мной'}).contacts-section
+				block contacts
 		+scripts(['app.min.js'])

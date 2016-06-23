@@ -1,0 +1,38 @@
+/* ==========================================================================
+   Contacts Form styles
+   ========================================================================== */
+
+
+.contacts-form
+	display block
+	font-family 'PT Sans'
+
+	&__label
+		stack(1)
+		font-size 1.125rem
+		margin-bottom 15px
+
+	&__input
+		width 100%
+		background  lighten(#f4eded, 3)
+		line-height 2rem
+		height 3rem
+		padding 5px 10px
+		margin-bottom 15px
+		font-size 1.25rem
+		border 2px solid main-text-color
+		border-radius 8px
+
+		&::placeholder
+			color lighten(main-text-color, 40%)
+			text-indent 0
+			transition .6s
+		&:focus
+			&::placeholder
+				text-indent 700px
+
+	&__textarea
+		@extend .contacts-form__input
+		resize none
+		height 200px
+		line-height 2rem
