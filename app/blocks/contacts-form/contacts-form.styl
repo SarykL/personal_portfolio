@@ -4,8 +4,22 @@
 
 
 .contacts-form
+	center()
 	display block
 	font-family 'PT Sans'
+	padding-bottom 40px
+	+above(480px)
+		width 95%
+	+above(768px)
+		width 85%
+	+above(1024px)
+		width 75%
+	+above(1280px)
+		width 65%
+	+above(1440px)
+		width 50%
+	+above(1800px)
+		width 45%
 
 	&__label
 		stack(1)
@@ -29,7 +43,7 @@
 			transition .6s
 		&:focus
 			&::placeholder
-				text-indent 700px
+				text-indent 100px
 
 	&__textarea
 		@extend .contacts-form__input
